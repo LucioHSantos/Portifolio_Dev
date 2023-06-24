@@ -1,0 +1,223 @@
+    :root {
+    --cor-principal:#121c27;
+    --cor-principal2: #fafafa;
+    --cor-secundaria1:  #06af69;
+    --cor-secundaria2: #7d0aa0;
+    --font1: 'Open Sans', sans-serif;
+    --font2: 'Ubuntu', sans-serif;
+    }
+    .formulario{
+        display: grid;
+        grid-template-areas:
+        "a1 a2 a2";
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 2%;
+        gap: 2%;
+        }
+
+
+
+    .formulario-texto{
+    grid-area: a1;
+    display: flex;
+    width: 40rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin: 0 auto;
+    gap: 1.5rem;
+    border-top: 1px solid #1a203767;
+    border-bottom: 1px solid #1a203767;
+    background: #fff;
+    
+
+    }
+
+    .formulario-texto h2{
+        align-items: center;
+        font: 2rem minecraft;
+        padding: 1%;
+        border: 0.5rem solid var(--cor-principal);
+        border-radius: 99px;
+        box-shadow: 0.2rem 0.2rem var(--cor-secundaria1);
+        color: var(--cor-principal1);
+    }
+
+    .formulario-img{
+        width: 60%;
+    }
+
+    .formulario p{
+    text-align: justify;
+    font: 1.4rem var(--font1), serif;
+    font-weight: 800;
+    color: var(--cor-principal);
+    }
+
+    .tabela{
+    grid-area: a2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 30rem;
+    gap: 20px;
+    padding: 1rem 3rem; 
+    background: #121c27de;
+    border: 5px solid var(--cor-principal);
+    border-radius: 5px;
+    
+    }
+
+    .icones {
+    display: flex;
+    margin: 0 auto;
+    }
+    
+    .icones li {
+        list-style: none;
+    }
+    
+    .icones li a {
+        width: 80px;
+        height: 80px;
+        background-color: #fff;
+        text-align: center;
+        line-height: 80px;
+        font-size: 35px;
+        margin: 0 10px;
+        display: block;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        border: 3px solid #fff;
+        z-index: 1;
+    }
+    
+    .icones li a .icon {
+        position: relative;
+        color: #262626;
+        transition: .5s;
+        z-index: 3;
+    }
+    
+    .icones li a:hover .icon {
+        color: #fff;
+        transform: rotateY(360deg);
+    }
+    
+    .icones li a:before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #f00;
+        transition: .5s;
+        z-index: 2;
+    }
+    
+    .icones li a:hover:before {
+        top: 0;
+    }
+    
+    .icones li:nth-child(1) a:before{
+        background: #05a06c;
+    }
+    
+    .icones li:nth-child(2) a:before{
+        background: #051520;
+    }
+    
+    .icones li:nth-child(3) a:before {
+        background: #0e76a8;
+    }
+
+    label{
+        padding: 0.1rem 0.3rem;
+        font: 0.8rem minecraft, serif;
+        border-radius: 90px;
+        color: var(--cor-principal);
+        background: var(--cor-principal2);
+        border: 3px solid var(--cor-principal);
+        box-shadow: 1px 3px var(--cor-secundaria2);
+        transition: 0.3s;
+    }
+    
+    input, textarea,
+    button{
+        width: 100%;
+        font: 1rem Lato, serif;
+        padding: 0.3rem;
+        font-weight: 700;
+    }
+
+    input, textarea{
+        padding-left: 2rem;
+        color: var(--cor-principal);
+        border: 0.3rem solid var(--cor-principal);
+        border-radius: 1.125rem;
+        transition: border-color 0.3s,
+        box-shadow 0.3s;
+    }
+
+    input:hover,
+    input:focus,
+    textarea:hover,
+    textarea:focus{
+        outline: none;
+        border: 0.3rem solid;
+        border-color: var(--cor-secundaria2);
+        box-shadow: 0 0 0 0.3125rem  #1a203744;
+    }
+
+    textarea{
+        min-height: 6.5rem;
+        resize: vertical;
+    }
+    
+    button{
+        align-self: center;
+        font: 0.8rem minecraft, serif;
+        width: 50%;
+        border: none;
+        border-radius: 90px;
+        color: var(--cor-principal);
+        background: var(--cor-principal2);
+        border: 9px solid var(--cor-principal);
+        box-shadow: 3px 3px var(--cor-secundaria2);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    button:hover{
+      box-shadow: 0 0 0.5rem var(--cor-secundaria1);
+      transition: 0.3s;
+      transform: translate(3px, 3px);
+  }
+    
+
+   
+
+    @media screen and (max-width: 600px){
+        .formulario{
+        display: grid;
+        grid-template-areas:
+        "a1 a1 a1"
+        "a2 a2 a2";
+    }
+    .formulario-texto{
+        font-size: 1rem;
+        margin: 0 auto;
+        width:30rem;
+    }
+    .tabela {
+        padding: 8%;
+        margin: 2rem auto;
+    }
+    }
+
+
